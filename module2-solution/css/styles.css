@@ -10,6 +10,10 @@ Author: Justin Loi - jloi2
     box-sizing: border-box;
   }
 
+p{
+    padding-top: 15px;
+}
+
 body {
     margin: 0;
     padding: 0;
