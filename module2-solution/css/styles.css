@@ -1,0 +1,165 @@
+/* 
+File: styles.css
+Course: EN.605.787.SP25 - Front End Web App Development
+Assignment: Module 2
+Due Date: 2/4/2025
+Author: Justin Loi - jloi2
+*/
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+menu-container {
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+menu-section {
+    background: #bebebe;
+    float: left;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 20px;
+    margin: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    text-align: left;
+    height: 200px;
+    overflow: hidden;
+}
+
+menu-section:hover {
+    overflow-y: auto;
+}
+
+.chicken section-title { 
+    background: #f8b195; 
+}
+.beef section-title { 
+    background: #e74c3c; 
+    color: #ffffff;
+}
+.sushi section-title { 
+    background: #f7d794; 
+}
+
+/********** Desktop **********/
+@media (min-width: 992px) {
+    .chicken, .beef, .sushi {
+        float: left;
+    }
+    .menu-title {
+        text-align: center;
+        font-size: 175%;
+        margin-bottom: 15px;
+    }
+    .categories-title {
+        display: none;
+    }
+    .section-title-default {
+        border: 1px solid rgb(0, 0, 0);
+        padding: 5px;
+        width: 100px;
+        font-weight: bold;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        right: 0px;
+    }
+    .section-title-mobile {
+        display: none;
+    }
+    menu-container .chicken {
+        width: 33.33%;
+    }
+    menu-container .beef {
+        width: 33.33%;
+    }
+    menu-container .sushi {
+        width: 33.33%;
+    }
+}
+
+/********** Tablet **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    .chicken, .beef, .sushi {
+        float: left;
+    }
+    .menu-title {
+        text-align: center;
+        font-size: 175%;
+        margin-bottom: 15px;
+    }
+    .categories-title {
+        display: none;
+    }
+    .section-title-default {
+        border: 1px solid rgb(0, 0, 0);
+        padding: 5px;
+        width: 100px;
+        font-weight: bold;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        right: 0px;
+    }
+    .section-title-mobile {
+        display: none;
+    }
+    menu-container .chicken {
+        width: 50%;
+    }
+    menu-container .beef {
+        width: 50%;
+    }
+    menu-container .sushi {
+        width: 100%;
+    }
+}
+
+/********** Mobile **********/
+@media (max-width: 767px) {
+    .chicken, .beef, .sushi {
+        float: left;
+    }
+    .menu-title {
+        display: none;
+    }
+    .categories-title {
+        display: block;
+        text-align: left;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 125%;
+        margin-bottom: 15px;
+        margin-left: 10px;
+    }
+    .section-title-default {
+        display: none;
+    }
+    .section-title-mobile {
+        border: 1px solid rgb(0, 0, 0);
+        padding: 5px;
+        width: 100%;
+        font-weight: bold;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        right: 0px;
+    }
+    menu-container .chicken {
+        width: 100%;
+    }
+    menu-container .beef {
+        width: 100%;
+    }
+    menu-container .sushi {
+        width: 100%;
+    }
+}
