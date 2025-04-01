@@ -1,0 +1,13 @@
+<!-- 
+File: foundItems.html
+Course: EN.605.787.SP25 - Front End Web App Development
+Assignment: Module 8
+Due Date: 4/8/2025
+Author: Justin Loi - jloi2
+-->
+<ul>
+    <li ng-repeat="item in items">
+        {{ item.name }}, {{ item.short_name }}, {{ item.description }}
+        <button ng-click="onRemove({index: $index})">Don't want this one!</button>
+    </li>
+</ul>

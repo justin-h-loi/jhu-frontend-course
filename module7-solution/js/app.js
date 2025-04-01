@@ -1,4 +1,4 @@
-// File: script.js
+// File: app.js
 // Course: EN.605.787.SP25 - Front End Web App Development
 // Assignment: Module 7
 // Due Date: 3/25/2025
