@@ -1,0 +1,12 @@
+<!-- 
+File: categories.component.template.html
+Course: EN.605.787.SP25 - Front End Web App Development
+Assignment: Module 9
+Due Date: 4/22/2025
+Author: Justin Loi - jloi2
+-->
+<ul>
+    <li ng-repeat="category in $ctrl.categories">
+      <a ui-sref="items({ categoryShortName: category.short_name })">{{ category.name }}</a>
+    </li>
+</ul>
