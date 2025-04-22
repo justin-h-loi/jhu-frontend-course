@@ -1,0 +1,34 @@
+<!-- 
+File: my-info.html
+Course: EN.605.787.SP25 - Front End Web App Development
+Assignment: Module 10
+Due Date: 5/6/2025
+Author: Justin Loi - jloi2
+-->
+<div class="container" ng-controller="MyInfoController as myInfoCtrl">
+    <h2>My Information</h2>
+  
+    <!-- No user exists case -->
+    <div ng-if="!myInfoCtrl.user">
+      <p>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></p>
+    </div>
+  
+    <!-- User exists case: displays info -->
+    <div ng-if="myInfoCtrl.user">
+      <p><strong>First Name:</strong> {{ myInfoCtrl.user.firstName }}</p>
+      <p><strong>Last Name:</strong> {{ myInfoCtrl.user.lastName }}</p>
+      <p><strong>Email:</strong> {{ myInfoCtrl.user.email }}</p>
+      <p><strong>Phone:</strong> {{ myInfoCtrl.user.phone }}</p>
+      <br><br/>
+      <div ng-if="myInfoCtrl.favoriteItem">
+        <h3>Favorite Menu Item</h3>
+        <p><strong>Menu Item Number:</strong> {{ myInfoCtrl.favoriteItem.short_name }}</p>
+        <p><strong>Name:</strong> {{ myInfoCtrl.favoriteItem.name }}</p>
+        <p><strong>Description:</strong> {{ myInfoCtrl.favoriteItem.description }}</p>
+        <img ng-src="images/menu/{{ myInfoCtrl.favoriteItem.category_short_name }}/{{ myInfoCtrl.favoriteItem.short_name.endsWith('0') ? myInfoCtrl.favoriteItem.category_short_name : myInfoCtrl.favoriteItem.short_name }}.jpg"
+          alt="{{ myInfoCtrl.favoriteItem.name }}"
+          class="img-responsive"
+          style="max-width: 300px;">
+      </div>
+    </div>
+</div>  
