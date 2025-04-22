@@ -74,7 +74,7 @@ Author: Justin Loi - jloi2
         style="color: rgb(0, 0, 0);"
         required
       />
-      <span ng-if="signUpForm.favorite.$error.required && signUpForm.favorite.$touched && !signUpCtrl.menuValid">
+      <span ng-if="signUpForm.favorite.$touched && !signUpCtrl.menuValid">
         No such menu number exists.
       </span>
       <br><br/>

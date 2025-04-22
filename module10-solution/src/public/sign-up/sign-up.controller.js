@@ -19,6 +19,7 @@
     
       // Function to check if the user's input favorite item is valid
       signUpCtrl.validateMenuItem = function () {
+        signUpCtrl.menuValid = false;
         if (!signUpCtrl.user.favorite) {
           return;
         } 
